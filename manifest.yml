@@ -1,0 +1,20 @@
+applications:
+  - name: myapp
+    path: myapp
+    services:
+      - jeff-hdi-container
+      - myuaa
+
+  - name: web
+    path: web
+    env:
+      destinations: >
+        [
+          {
+            "name":"myapp",
+            "url":"https://ussxsadevdb.mykonicaminolta.com:51060",
+            "forwardAuthToken": true
+          }
+        ]
+    services:
+      - myuaa
