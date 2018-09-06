@@ -4,6 +4,11 @@
       "source": "^/myapp/(.*)$",
       "target": "$1",
       "destination": "myapp"
+    },
+    {
+      "source": "^/xsjs/(.*)$",
+      "target": "$1",
+      "destination": "xsjs"
     }
   ]
 }

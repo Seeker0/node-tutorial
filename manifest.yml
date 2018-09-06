@@ -14,7 +14,18 @@ applications:
             "name":"myapp",
             "url":"https://ussxsadevdb.mykonicaminolta.com:51060",
             "forwardAuthToken": true
+          },
+          {
+            "name": "xsjs",
+            "url": "https://ussxsadevdb.mykonicaminolta.com:51086",
+            "forwardAuthToken": true
           }
         ]
     services:
+      - myuaa
+
+  - name: xsjs
+    path: xsjs
+    services:
+      - jeff-hdi-container
       - myuaa

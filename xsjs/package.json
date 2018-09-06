@@ -1,0 +1,15 @@
+{
+  "name": "xsjs",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@sap/xsenv": "^1.2.9",
+    "@sap/xsjs": "^1.6.3"
+  },
+  "engines": {
+    "node": "4"
+  },
+  "scripts": {
+    "start": "node start.js"
+  }
+}
