@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "path": "/hdi_tinydb",
+      "target": {
+        "type": "destination",
+        "name": "tinydb"
+      },
+      "description": "Tiny World ODATA service"
+    }
+  ]
+}

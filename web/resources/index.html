@@ -1,12 +1,54 @@
 <html>
 <head>
-  <title>Javascript Tutorial</title>
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
+  <title>Node Demo</title>
+
+  <script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+
+      id="sap-ui-bootstrap"
+      data-sap-ui-libs="sap.ui.commons, sap.ui.table"
+      data-sap-ui-theme="sap_bluecrystal">
+
+  </script>
+
+  <style>
+  .sapUiTableHdrTitle {
+    font-size: @sapMFontHeader4Size;
+    height: auto;
+    color: @sapUiGroupTitleTextColor;
+  }
+  </style>
+  <script src="./Util.js"></script>
+  <script>
+    var oModel = new sap.ui.model.odata.ODataModel("/xsjs/xsodata/purchaseOrder.xsodata", true);
+
+    var oTable = new sap.ui.table.Table({
+      title: "Purchase Orders",
+      id: "POs",
+      toolbar: new sap.ui.commons.Toolbar({
+        items: [new sap.ui.commons.Button({
+          text: "Add Purchase Order",
+          press: openFirstDialog
+        })
+      ]
+    }),
+    selectionMode: sap.ui.table.SelectionMode.Single,
+    selectionBehavior: sap.ui.table.SelectionBehavior.RowOnly
+    });
+
+    oTable.addColumn(new sap.ui.table.Column({label: "Purchase Order ID", template: "PURCHASEORDERID"}));
+
+    oTable.setModel(oModel);
+    oTable.bindRows("/POHeader");
+    oTable.placeAt("content")
+  </script>
 </head>
-<body>
-  <h1>Javascript Tutorial</h1>
+<body class="sapUiBody">
+  <h1>Node Demo</h1>
   <a href="/myapp/">myapp</a>
   <p>
     <a href="/xsjs/get-time.xsjs">xsjs</a>
   </p>
+  <div id="content"></div>
 </body>
 </html>

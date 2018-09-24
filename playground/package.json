@@ -1,0 +1,22 @@
+{
+  "name": "playground",
+  "dependencies": {
+    "@sap/hdbext": "^4.7.2",
+    "@sap/hdi-deploy": "^3.7.0",
+    "@sap/xsenv": "^1.2.9",
+    "@sap/xsjs": "^3.4.0",
+    "dotenv": "^6.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.8.1",
+    "pug": "^2.0.0-beta6",
+    "serve-favicon": "~2.4.2"
+  },
+  "scripts": {
+    "start": "node start.js"
+  }
+}

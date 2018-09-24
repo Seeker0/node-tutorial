@@ -3,12 +3,21 @@
     {
       "source": "^/myapp/(.*)$",
       "target": "$1",
-      "destination": "myapp"
+      "destination": "myapp",
+      "csrfProtection": false,
+      "authenticationType": "xsuaa"
     },
     {
       "source": "^/xsjs/(.*)$",
       "target": "$1",
-      "destination": "xsjs"
+      "destination": "xsjs",
+      "csrfProtection": false,
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "(.*)(.xsodata)",
+      "destination": "xsjs",
+      "authenticationType": "xsuaa"
     }
   ]
 }

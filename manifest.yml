@@ -3,6 +3,7 @@ applications:
     path: myapp
     services:
       - jeff-hdi-container
+      - hdi_tinydb
       - myuaa
 
   - name: web
@@ -26,6 +27,19 @@ applications:
 
   - name: xsjs
     path: xsjs
+    services:
+      - jeff-hdi-container
+      - myuaa
+
+  - name: playground
+    path: playground
+    services:
+      - jeff-hdi-container
+      - hdi_tinydb
+      - myuaa
+
+  - name: db
+    path: db
     services:
       - jeff-hdi-container
       - myuaa

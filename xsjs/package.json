@@ -4,12 +4,16 @@
   "private": true,
   "dependencies": {
     "@sap/xsenv": "^1.2.9",
-    "@sap/xsjs": "^1.6.3"
+    "@sap/xsjs": "^3.4.0"
+  },
+  "devDependencies": {
+    "@sap/xsjs-test": "2.0.14"
   },
   "engines": {
     "node": "4"
   },
   "scripts": {
-    "start": "node start.js"
+    "start": "node start.js",
+    "test": "node testrun.js"
   }
 }
